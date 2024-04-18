@@ -117,7 +117,7 @@ dfe['TotalSpending'] = dfe['MntCoke'] + dfe['MntFruits'] + dfe['MntMeatProducts'
 dfe['TotalTrx'] = dfe['NumDealsPurchases'] + dfe['NumWebPurchases'] + dfe['NumCatalogPurchases'] + dfe['NumStorePurchases']
 
 # Calculate the conversion rate for each customer (the number of web purchases divided by the number of web visits)
-dfe['ConversionRate'] =  dfe['NumWebPurchases'] / dfe['NumWebVisitsMonth']
+dfe['ConversionRate'] = dfe['NumWebPurchases'] / dfe['NumWebVisitsMonth']
 
 # %% [markdown]
 # ### EDA
