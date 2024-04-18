@@ -36,7 +36,7 @@ warnings.filterwarnings('ignore')
 
 # %%
 pd.set_option('display.max_columns', None)
-df = pd.read_csv('./data/marketing_campaign_data.csv')
+df = pd.read_csv('../data/marketing_campaign_data.csv')
 display(df.sample(4))
 
 # Display the information about the DataFrame
@@ -117,7 +117,7 @@ dfe['TotalSpending'] = dfe['MntCoke'] + dfe['MntFruits'] + dfe['MntMeatProducts'
 dfe['TotalTrx'] = dfe['NumDealsPurchases'] + dfe['NumWebPurchases'] + dfe['NumCatalogPurchases'] + dfe['NumStorePurchases']
 
 # Calculate the conversion rate for each customer (the number of web purchases divided by the number of web visits)
-dfe['ConversionRate'] = dfe['NumWebPurchases'] / dfe['NumWebVisitsMonth']
+dfe['ConversionRate'] =  dfe['NumWebPurchases'] / dfe['NumWebVisitsMonth']
 
 # %% [markdown]
 # ### EDA
@@ -417,17 +417,6 @@ plt.show()
 # 4. **Conversion Rate and Age**:<br> There is no significant correlation between conversion rate and age. This indicates that the likelihood of a customer completing a purchase after visiting our web platform does not significantly vary with age. This could suggest that our platform appeals to a wide range of age groups.
 # 
 # These insights can help us better understand the behavior of our customers and inform our marketing and sales strategies. However, it's important to remember that correlation does not imply causation, and further investigation may be needed to understand the underlying causes of these relationships.
-
-# %%
-plt.figure(figsize=(9, 6), facecolor='#E8E8E8')
-palette = ['#A2A2A2'] * 2 + ['#D1106F']
-barplot = sns.barplot(x='AgeGroup', y='TotalSpending', data=dfe, palette=palette, order=age_order, ci=None)
-
-
-plt.title('Total Spending by Age Group', fontsize=18, fontweight='bold', y=1.03)
-plt.xlabel('Age Group', fontsize=13.5)
-plt.ylabel('Total Spending', fontsize=13.5)
-plt.grid(False)
 
 # %%
 # Create a 3x2 grid of subplots with a specific size and background color
@@ -762,12 +751,6 @@ print('\ndataframe after scaled(standarized) :')
 scaled_dfp.head()
 
 # %% [markdown]
-# ## Task 3 : Modelling
-# Goals : Group customers into several clusters<br><br>
-# Objective : 
-# Apply the k-means clustering algorithm to the existing dataset, choose the correct number of clusters by looking at the elbow method, and evaluate using the silhouette score.
-
-# %% [markdown]
 # ### PCA
 # PCA is needed to reduce the dimensionality of the data. Because the data has 39 features, it is necessary to reduce the dimensionality of the data so that the data is not too complex and the machine learning model can run faster.
 
@@ -783,6 +766,12 @@ dfpca = pd.DataFrame(pca.fit_transform(scaled_dfp), index=dfp_noutlier.index)
 # Rename the columns of the DataFrame to 'PC1' and 'PC2' for better readability
 # 'PC1' and 'PC2' represent the first and second principal components respectively
 dfpca.rename(columns={0:'PC1', 1:'PC2'}, inplace=True)
+
+# %% [markdown]
+# ## Task 3 : Modelling
+# Goals : Group customers into several clusters<br><br>
+# Objective : 
+# Apply the k-means clustering algorithm to the existing dataset, choose the correct number of clusters by looking at the elbow method, and evaluate using the silhouette score.
 
 # %% [markdown]
 # ### Find the optimal n cluster with Elbow Method and Silhouette Method 
