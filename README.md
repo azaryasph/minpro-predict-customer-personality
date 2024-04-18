@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/github/commit-activity/m/azaryasph/minpro-predict-customer-personality" alt="Commit Activity Badge">
     <img src="https://img.shields.io/github/repo-size/azaryasph/minpro-predict-customer-personality" alt="Repo Size Badge">
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="Contributions welcome">
-    <img src="https://www.codefactor.io/repository/github/azaryasph/minpro-predict-customer-personality" alt="CodeFactor" />
+    <img src="https://www.codefactor.io/repository/github/azaryasph/minpro-predict-customer-personality/badge" alt="CodeFactor" />
   </a>
 </p>
 
