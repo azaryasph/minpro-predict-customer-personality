@@ -82,8 +82,8 @@ After creating the new features, Let's analyze the conversion rate of the market
 ### Age Group, Parent Status, Education Level, and Marital Status Distribution 🧮
 
 <p float="left">
-  <img src="./images/image-4.png" width="550" />
-  <img src="./images/image-5.png" width="600" /> 
+  <img src="./src\images/image-4.png" width="550" />
+  <img src="./src\images/image-5.png" width="600" /> 
 </p>
 
 Based on our analysis of the customer data, we have identified several important findings regarding the demographic profile of our primary customer base:
@@ -101,7 +101,7 @@ These insights can provide valuable information for gaining a deeper understandi
 ### Total Spending, Income, and Conversion Rate Correlation 🛒
 
 <p align="center">
-  <img src="images/image-6.png" width="550" />
+  <img src="./src\images/image-6.png" width="550" />
 </p>
 
 Several significant correlations between the variables were noted in this multivariate analysis:
@@ -119,7 +119,7 @@ These observations can improve our comprehension of consumer behavior and guide 
 ### Conversion Rate based on Age Group, Parent Status, Education Level, Num Child & Education Level 📈
 
 <p align="center">
-  <img src="images/image-7.png" width="550" />
+  <img src="./src\images/image-7.png" width="550" />
 </p>
 
 Through my analysis of customer behavior, I have discovered several significant trends:
@@ -150,8 +150,8 @@ In this section, we will build a clustering model using KMeans algorithm to pred
 before we build the model, we need to determine the optimal number of clusters using the Elbow Method and Silhouette Score.
 
 <p float="left">
-  <img src="./images/image.png" width="500" />
-  <img src="./images/image-1.png" width="627" /> 
+  <img src="./src\images/image.png" width="500" />
+  <img src="./src\images/image-1.png" width="627" /> 
 </p>
 
 Based on the Elbow Method and Silhouette Score, we will use 4 clusters to build the model.
@@ -159,7 +159,7 @@ Based on the Elbow Method and Silhouette Score, we will use 4 clusters to build 
 After determining the optimal number of clusters, we will build the KMeans model and visualize the clusters using PCA.
 
 <p align="center">
-    <img src="./images/image-2.png" width="500" />
+    <img src="./src\images/image-2.png" width="500" />
 </p>
 
 Seems like the clusters are well separated, we can use this model to predict customer personality.
@@ -168,7 +168,7 @@ Seems like the clusters are well separated, we can use this model to predict cus
 In this section, we interpret the clusters to understand the customer personality and provide insights for marketing retargeting.
 
 <p align="center">
-  <img src="./images/image-3.png" width="700" />
+  <img src="./src\images/image-3.png" width="700" />
 </p>
 
 Based on the analysis, we can provide insights for marketing retargeting:
@@ -261,7 +261,7 @@ In this project, we have successfully analyzed the conversion rate of the market
 I would like to express my gratitude to [Rakamin Academy](https://www.rakamin.com/) for providing the dataset and the opportunity to work on this project. I would also like to thank [Mr. Rezki Trianto](https://www.linkedin.com/in/rezkitrianto/) for the guidance and support throughout the project.
 
 <p align="center">
-    <img src="images/Thankyou.jpg" alt="swag" width=600>
+    <img src="./src\images/Thankyou.jpg" alt="swag" width=600>
 </p>
 
 
